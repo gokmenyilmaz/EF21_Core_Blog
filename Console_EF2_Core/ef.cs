@@ -15,7 +15,7 @@ namespace ConsoleBlogApp_EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=MyDatabase;Trusted_Connection=True;");
+            optionsBuilder.UseInMemoryDatabase(@"Server=.;Database=MyDatabase;Trusted_Connection=True;");
         }
     }
 

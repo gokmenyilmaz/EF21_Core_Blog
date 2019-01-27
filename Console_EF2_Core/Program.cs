@@ -15,16 +15,17 @@ namespace ConsoleBlogApp_EF
 
 
 
-            //var blog = new Blog { BlogId=1, Url = "www.11111yyyyy", Rating=9 };
-            //blog.Posts = new List<Post>();
-            //blog.Sahips = new List<Sahip>();
+
+            var blog = new Blog { BlogId = 1, Url = "www.11111yyyyy", Rating = 9 };
+            blog.Posts = new List<Post>();
+            blog.Sahips = new List<Sahip>();
 
 
-            //blog.Posts.Add(new Post { PostId=13, Content = "mmm_yeni_gunc", Title = "t1xxx", BlogId=1});
-            ////blog.Posts.Add(new Post { Content = "sssss", Title = "t2" });
+            blog.Posts.Add(new Post { PostId = 13, Content = "mmm_yeni_gunc", TitleX= "t1xxx", BlogId = 1 });
+            //blog.Posts.Add(new Post { Content = "sssss", Title = "t2" });
 
-            //blog.Sahips.Add(new Sahip { Yas1 = 3 });
-            //blog.Sahips.Add(new Sahip { Yas1 =12 });
+            blog.Sahips.Add(new Sahip { Yas5= 3 });
+            blog.Sahips.Add(new Sahip { Yas5 = 12 });
 
 
             //dc.ChangeTracker.TrackGraph(blog, e=>ayarla(e.Entry));
@@ -34,13 +35,15 @@ namespace ConsoleBlogApp_EF
             //Environment.Exit(0);
 
 
-            var u=dc.Database.GetDbConnection();
+            //var u=dc.Database.GetDbConnection();
 
           
 
-            dc.Database.Migrate();
+            //dc.Database.Migrate();
 
-            //InsertUpdateOrDeleteGraph(dc, blog);
+            InsertUpdateOrDeleteGraph(dc, blog);
+
+            var x = dc.Blogs.First();
 
 
 
